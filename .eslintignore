@@ -1,0 +1,23 @@
+# !**/.eslintrc*
+node_modules
+dist
+public
+*.svg
+*.ico
+*.json
+.gitignore
+*.md
+*.log
+*.lock
+.vsocde
+cache
+
+# prettier
+*.prettierrc.*
+typings
+*.js
+*.css
+*.d.ts
+nwjs-cli-service
+scripts
+*.html

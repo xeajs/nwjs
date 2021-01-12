@@ -1,0 +1,19 @@
+<script>
+    var timer = null;
+    var nowDate = Date.now();
+    var timeout = 2 * 1000
+    timer = setInterval(() => {
+        if (Date.now() - nowDate > timeout) {
+            clearInterval(timer);
+            timer = null;
+            nw.Window.get().show();
+            alert('The server is not responding properly!');
+        }
+        var listen_port = parseInt(window.global['listen_port']);
+        if (listen_port) {
+            clearInterval(timer);
+            timer = null;
+            window.location.href = `http://localhost:${listen_port}`
+        }
+    }, 60);
+</script>
