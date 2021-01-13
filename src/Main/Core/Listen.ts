@@ -1,5 +1,3 @@
-import 'colors';
-
 import Config from '~/config';
 import Koa from 'koa';
 import os from 'os';
@@ -31,11 +29,10 @@ const OpenMainWindow = () => {
 };
 export const Listen = async (app: Koa, callback?: Function) => {
   app.listen(Config.port, () => {
-    console.info(``);
-    console.info(`serve running at:`.rainbow);
-    console.info(`- Main Process Server: `.rainbow + `http://localhost:${GetProcessPort().Main + Config.prefix}/`.blue);
-    console.info(`- Render Process Server: `.rainbow + `http://localhost:${GetProcessPort().Render}/`.blue);
-    console.info(`- 外部存储目录: `.rainbow + `${path.resolve($$.AppInfo.WorkPath)}`.blue);
+    console.info(`serve running at:`);
+    console.info(`- Main Process Server: http://localhost:${GetProcessPort().Main + Config.prefix}/`);
+    console.info(`- Render Process Server: http://localhost:${GetProcessPort().Render}/`);
+    console.info(`- 外部存储目录: ${path.resolve($$.AppInfo.WorkPath)}`);
     OpenMainWindow();
     callback && typeof callback === 'function' && callback();
   });

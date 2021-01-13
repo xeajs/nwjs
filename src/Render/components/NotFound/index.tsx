@@ -9,7 +9,7 @@ export default () => {
     <section className="notfound drag ui-vw-100 ui-vh-100 flex just-center align-center">
       <section className="ui-h-100 flex-col just-center ui-pr-60 no-drag">
         <h1 className="title">404</h1>
-        <p className="sub-title">灯红酒绿迷乱了我前进的方向</p>
+        <p className="sub-title">灯红酒绿迷乱了我前进的方向</p>
         <Button style={{ width: 100 }} type="primary" onClick={() => history.replace('/')}>
           去往首页
         </Button>

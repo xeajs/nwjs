@@ -4,14 +4,10 @@ import Store from '@/Render/store';
 
 type StoreTypes = typeof Store;
 
-/**
- * @useInject 返回类型
- */
+/** @useInject 返回类型 */
 type UseInjectBackType<P extends keyof StoreTypes> = { [K in P]: StoreTypes[K] };
 
-/**
- * @注入所有 useInjectAll
- */
+/** @注入所有 useInjectAll */
 export function useInjectAll(): StoreTypes {
   return React.useContext(MobXProviderContext) as StoreTypes;
 }

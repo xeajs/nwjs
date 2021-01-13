@@ -2,7 +2,7 @@
  * @Author yejiang1015
  * @Date 2020-03-25 22:18:12
  * @Last Modified by: yejiang1015
- * @Last Modified time: 2020-12-15 17:24:30
+ * @Last Modified time: 2021-01-13 10:49:05
  * @Message Message
  * @param data      返回值
  * @param code      状态码 0 正常 !0 异常
@@ -21,9 +21,7 @@ export const Send = (ctx?: Koa.Context) => {
         code: code || SendCode.Default,
         message: message || SendMsg.Default
       };
-      /**
-       * @数据库返回和接口响应通用
-       */
+      /** @数据库返回和接口响应通用 */
       if (ctx) {
         ctx.status = 200;
         ctx.body = _succ;
@@ -36,9 +34,7 @@ export const Send = (ctx?: Koa.Context) => {
         code: code || SendCode.Other,
         message: message || SendMsg.Other
       };
-      /**
-       * @数据库返回和接口响应通用
-       */
+      /** @数据库返回和接口响应通用 */
       if (ctx) {
         ctx.body = _fail;
         ctx.status = 200;

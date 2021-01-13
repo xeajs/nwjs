@@ -3,19 +3,19 @@
  * @Error Route.all('/', ***);
  * @Success Route.all(SetApiPrefix('***'), ***);
  */
-
 import * as Hello from '@/Main/Controller/Hello';
-import * as Hello1 from '@/Main/Controller/Hello1';
 
+import Config from '~/config';
 import Router from 'koa-router';
 
-// import { SetApiPrefix } from '@/Main/Core';
+export const Prefix = (path: string) => {
+  const prefix = Config.prefix.replace(/\//g, '');
+  const firstString = /^\//.test(path) ? '' : '/';
+  return `/${prefix}${firstString}${path}`;
+};
 
 const Route = new Router();
 
-// Route.all('/hello', Hello.AllHello);
-// Route.all('/hello1', Hello1.AllHello);
-// Route.all(SetApiPrefix('/hello'), Hello.AllHello);
-// Route.all(SetApiPrefix('/hello1'), Hello1.AllHello);
+Route.all(Prefix('/hello'), Hello.AllHello);
 
 export default Route;

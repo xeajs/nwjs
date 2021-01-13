@@ -2,8 +2,8 @@ import { LocationState, Path } from 'history';
 import React, { Suspense, useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router';
 
+import FullScreenSpin from '@/Render/components/FullScreenSpin';
 import RouterWrapNotFound from '@/Render/components/NotFound';
-import RouterWrapSpin from '@/Render/components/Spin';
 
 interface RouteChangePropsTypes {
   from: string;
@@ -67,7 +67,7 @@ export const PackingWithAuth: React.FC<{ onChange?: PackingWithAuthOnChange }> =
   };
   return (
     <BaseRouteChange onChange={onChange || _onChange}>
-      <Suspense fallback={<RouterWrapSpin />}>
+      <Suspense fallback={<FullScreenSpin />}>
         <Switch>
           {children}
           <Route path="*" component={RouterWrapNotFound}></Route>

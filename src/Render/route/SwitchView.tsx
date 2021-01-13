@@ -2,7 +2,7 @@
  * @Author yejiang1015
  * @Date 2020-12-21 17:41:41
  * @Last Modified by: yejiang1015
- * @Last Modified time: 2020-12-21 17:43:19
+ * @Last Modified time: 2021-01-13 11:11:21
  * @Message 路由配置规则
  * @Message 一级目录配置为无业务相关的。比如没有没有主窗口或者主窗口不一的
  * @Message 二级目录为业务相关联，比如主要窗口内切换页面
@@ -20,7 +20,6 @@ export const SwitchViewRoot = () => (
   <PackingWithAuth>
     <Route path="/" exact component={RouterWrapPages}></Route>
     <Route path="/home" component={lazy(() => import('@/Render/pages/Home'))}></Route>
-    <Route path="/settings" component={lazy(() => import('@/Render/pages/Settings'))}></Route>
   </PackingWithAuth>
 );
 
@@ -30,7 +29,7 @@ export const SwitchViewRoot = () => (
 export const SwitchViewHome = () => (
   <PackingWithAuth>
     <Route path="/home/" exact component={() => <Redirect to="/home/list" />}></Route>
-    <Route path="/home/list" component={lazy(() => import('@/Render/pages/Home/index'))}></Route>
-    <Route path="/home/info" component={lazy(() => import('@/Render/pages/Home/index'))}></Route>
+    <Route path="/home/list" component={lazy(() => import('@/Render/pages/Home'))}></Route>
+    <Route path="/home/info" component={lazy(() => import('@/Render/pages/Home'))}></Route>
   </PackingWithAuth>
 );
