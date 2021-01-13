@@ -17,8 +17,6 @@ declare global {
   export namespace $$ {
     const dialog: Dialog;
     const isPro: () => boolean;
-    const joinPathBasedOnThePublic: (...dirOrPath: string[]) => string;
-    const joinDirBasedOnTheCwd: (...dirOrPath: string[]) => string;
     /** 系统 Dialog 组件只有在主进程才能访问到， 把方法直接挂载到全局提供所有渲染进程访问 */
     const AppInfo: Readonly<{
       platform: NodeJS.Platform;

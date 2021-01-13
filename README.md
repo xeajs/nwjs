@@ -1,35 +1,28 @@
-# @xeajs/electron
+# @xeajs/nwjs
 
 快速开始、渐进式、沉浸式、高可用、可配置、模块化、语义化、一键开发、一键打包。
-
-## 系统架构
-
-<!-- https://www.jianguoyun.com -->
-<span style="background: #f1f1f1;display: inline-block;">
-  <img src="docs/screenshot/framework.png">
-</span>
 
 ## Install
 
 ```bash
 
-git clone https://github.com/xeajs/electron myapp
+git clone https://github.com/xeajs/nwjs myapp
 
 ```
 
 ## 跨端
 
-* exe Windows7、Window10 (x86、x64)
+* exe Windows XP、 Windows7、Window10 (x86、x64)
 * app Darwin (Mac Os)
-* deb Linux (Ubuntu)
 
 ## 技术栈
 
 ### `内核`
 
 ```js
-electron                  ==>   客户端运行时
-electron-builder          ==>   客户端打包
+nwjs                  ==>   客户端运行时
+nw-builder            ==>   客户端打包
+innosetup-compiler    ==>   安装包构建
 ```
 
 ### `主进程 - 本地服务服务端`
@@ -146,6 +139,12 @@ lint-staged
 `}</style>
 
 ```
+
+## 图标文件 `区分多个文件，使用单个文件有坑`
+
+* `icon.png` 导航栏图标
+* `icon.ico` 卸载程序图标
+* `favicon.ico` 安装包图标
 
 ## TODO
 

@@ -2,7 +2,7 @@
  * @Author yejiang1015
  * @Date 2020-12-18 12:57:26
  * @Last Modified by: yejiang1015
- * @Last Modified time: 2021-01-11 18:00:47
+ * @Last Modified time: 2021-01-13 10:14:50
  */
 
 import { readSetting, writeSetting } from '@/Global/Module/Settings';
@@ -11,15 +11,10 @@ import { Event } from '@/Global/Module/Event';
 import ExternalStorage from '@/Global/Module/ExternalStorage';
 import Logs from '@/Global/Module/Log';
 import Package from '~/package.json';
-import path from 'path';
 
 export default () => {
   const __ = {
     isPro: () => process.env.NODE_ENV === 'production',
-    joinDirBasedOnTheCwd: (...dirOrPath: string[]) => path.join(process.cwd(), ...dirOrPath),
-    joinPathBasedOnThePublic: (...dirOrPath: string[]) => {
-      return path.join(__dirname, '../', `public/`, ...dirOrPath);
-    },
     AppInfo: {
       platform: process.platform,
       versions: {
