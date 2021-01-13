@@ -148,7 +148,7 @@ lint-staged
 
 ## TODO
 
-* [Issues](https://github.com/xeajs/electron/issues)
+* [Issues](https://github.com/xeajs/nwjs/issues)
 
 ## CHANGELOG
 

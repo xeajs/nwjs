@@ -2,13 +2,13 @@
  * @Author yejiang1015
  * @Date 2020-12-18 12:57:26
  * @Last Modified by: yejiang1015
- * @Last Modified time: 2021-01-04 16:49:28
+ * @Last Modified time: 2021-01-13 10:39:39
  * @Message settings.json 默认值
  */
 
 const settingJsonDefaultData = {
-  github: 'https://github.com/xeajs/electron',
-  wiki: 'https://github.com/xeajs/electron/wiki',
+  github: 'https://github.com/xeajs/nwjs',
+  wiki: 'https://github.com/xeajs/nwjs/wiki',
   home: 'https://xeajs.gitee.io/'
 };
 /** ============================ 默认 settings 配置 ============================ */

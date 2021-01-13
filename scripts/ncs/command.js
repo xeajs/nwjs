@@ -116,9 +116,9 @@ class Command extends EventEmitter {
   /** Readme */
   help() {
     console.log(`
-    Command:    node electron-cli-service
+    Command:    node nwjs-cli-service
 
-    Options:    [start, build, kill]
+    Options:    [start, build]
     `);
   }
 

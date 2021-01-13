@@ -1,7 +1,6 @@
 /**
  * @notice 注意: 修改"全局声明"必须在模块内部, 所以至少要有 @export{} 字样
  */
-import { Dialog } from 'electron';
 import { SettingJsonTypes } from '@/Global/settingJson';
 import { ListenerType, EventMapType } from '@/Main/Global/Event';
 import { AppEventNames } from '@/Typing/EventTypes';
@@ -15,9 +14,7 @@ declare global {
   export type DirPath = string;
   export type FilePath = string;
   export namespace $$ {
-    const dialog: Dialog;
     const isPro: () => boolean;
-    /** 系统 Dialog 组件只有在主进程才能访问到， 把方法直接挂载到全局提供所有渲染进程访问 */
     const AppInfo: Readonly<{
       platform: NodeJS.Platform;
       versions: ElectronProcessVersions;
