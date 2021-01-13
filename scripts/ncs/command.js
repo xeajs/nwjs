@@ -94,7 +94,7 @@ class Command extends EventEmitter {
         console.log('\n');
         console.log('all done!');
         console.log('output path: ' + BuildConfig.nw.buildDir);
-        childProcess.fork(path.join(process.cwd(), 'scripts/ecs/innoSetup/setup.js'));
+        childProcess.fork(path.join(process.cwd(), 'scripts/ncs/innoSetup/setup.js'));
       })
       .catch(function (error) {
         console.error(error);

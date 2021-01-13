@@ -40,7 +40,7 @@ module.exports = {
     }
   },
   setup: {
-    _appId: `com.xeajs.ecs.${PackageJson.name}.app`,
+    _appId: `com.xeajs.ncs.${PackageJson.name}.app`,
     _appName: productName,
     _appZhName: productName,
     _appVersion: PackageJson.version,
@@ -48,8 +48,8 @@ module.exports = {
     _appURL: 'http://localhost',
     _appOutputPath: resolve('output'),
     _appRuntimePath: resolve(`output/nwjs-win32-unpacked/${productName}/win32`),
-    _appResourcesPath: resolve('scripts/ecs/InnoSetup/innosetup'),
+    _appResourcesPath: resolve('scripts/ncs/InnoSetup/innosetup'),
     temporaryIssPath: resolve('output/temp.iss'),
-    templateIssPath: resolve('scripts/ecs/InnoSetup/setup.iss')
+    templateIssPath: resolve('scripts/ncs/InnoSetup/setup.iss')
   }
 };

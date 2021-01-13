@@ -1,1 +1,1 @@
-require('./ecs/index');
+require('./ncs/index');
